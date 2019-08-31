@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @QuarkusTest
-public class KafkaConsumerTest {
+public class KafkaConsumerAppTest {
 
     @ConfigProperty(name = "smallrye.messaging.source.helloworld.bootstrap.servers")
     String servers;

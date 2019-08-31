@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @QuarkusTest
-public class HelloWorldServiceTest {
+public class HelloWorldServiceAppTest {
 
     @Inject
     HelloWorldService helloWorldService;

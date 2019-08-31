@@ -11,7 +11,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @QuarkusTest
-public class GiftTest {
+public class GiftAppTest {
 
     @Inject
     EntityManager em;
