@@ -32,34 +32,13 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- Hibernate ORM specific dependencies -->
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-hibernate-orm</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-envers</artifactId>
-        </dependency>
 
-        <!-- JDBC driver dependencies -->
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-jdbc-postgresql</artifactId>
-        </dependency>
-
-        <!-- Obliger d'inclure cette dependance présente dans un jar externe -->
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-flyway</artifactId>
-        </dependency>
-
-<!--<dependency>-->
-<!--    <groupId>io.quarkus</groupId>-->
-<!--    <artifactId>quarkus-flyway-deployment</artifactId>-->
-<!--    <version>0.21.1</version>-->
-<!--</dependency>-->
-
+<!-- TODO remove when https://github.com/quarkusio/quarkus/pull/3793 is merged -->
+<dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-flyway-deployment</artifactId>
+    <version>0.21.1</version>
+</dependency>
 
         <dependency>
             <groupId>com.damdamdeo</groupId>
@@ -70,10 +49,6 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-smallrye-openapi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
         </dependency>
 
         <dependency>

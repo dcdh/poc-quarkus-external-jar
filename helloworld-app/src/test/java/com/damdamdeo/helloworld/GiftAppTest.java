@@ -17,6 +17,20 @@ public class GiftAppTest {
     EntityManager em;
 
     @Test
+    public void should_store_gift_app_on_init() {
+        final List<GiftAppEntity> giftAppEntities = em.createQuery("SELECT g FROM GiftAppEntity g").getResultList();
+        assertThat(giftAppEntities.size()).isEqualTo(1);
+
+        final List<GiftAppEntity> giftAppsAudited = AuditReaderFactory.get(em)
+                .createQuery()
+                .forRevisionsOfEntity(GiftAppEntity.class, true, true)
+                .getResultList();
+        // dumb test has database may not be reset between each launch
+        // I just want to know that envers does not fail
+        assertThat(giftAppsAudited.size()).isGreaterThan(0);
+    }
+
+    @Test
     public void should_store_gift_on_init() {
         final List<GiftEntity> giftEntities = em.createQuery("SELECT g FROM GiftEntity g").getResultList();
         assertThat(giftEntities.size()).isEqualTo(1);

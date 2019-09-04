@@ -1,7 +1,9 @@
 > docker kill $(docker ps -aq); docker rm $(docker ps -aq); docker-compose up
 
-> pg_dump -d santa -U postgres
+> docker exec -it helloworldapp_helloworld-query_1 bash
 
-> psql -d santa -U postgres
+> pg_dump -d helloworld -U postgres
+
+> psql -d helloworld -U postgres
 
 > DROP SCHEMA public CASCADE;CREATE SCHEMA public;
